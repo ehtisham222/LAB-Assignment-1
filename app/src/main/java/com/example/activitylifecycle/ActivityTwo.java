@@ -19,8 +19,8 @@ public class ActivityTwo extends AppCompatActivity {
         setContentView(R.layout.activity_two);
         crt++;
         onCreate=findViewById(R.id.tvOnCreate);
-        onCreate.setText("onCreate Calls : "+crt);
-        Log.i("ActivityLifeCycle","onCreate is called");
+        onCreate.setText("onCreate() Calls : "+crt);
+        Log.i("ActivityLifeCycle","onCreate() is called");
         activityBtn=findViewById(R.id.btnActivity);
         activityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,32 +35,32 @@ public class ActivityTwo extends AppCompatActivity {
         strt++;
         onStart=findViewById(R.id.tvOnStart);
         onStart.setText("onStart() Calls : "+strt);
-        Log.i("ActivityLifeCycle","onStart is called");
+        Log.i("ActivityLifeCycle","onStart() is called");
     }
     protected void onResume(){
         super.onResume();
         rsm++;
         onResume=findViewById(R.id.tvOnResume);
         onResume.setText("onResume() Calls : "+rsm);
-        Log.i("ActivityLifeCycle","onStart is called");
+        Log.i("ActivityLifeCycle","onStart() is called");
     }
     protected void onRestart(){
         super.onRestart();
         rstart++;
         onRestart=findViewById(R.id.tvOnRestart);
         onRestart.setText("onRestart() Calls : "+rstart);
-        Log.i("ActivityLifeCycle","onStart is called");
+        Log.i("ActivityLifeCycle","onStart() is called");
     }
     protected void onPause(){
         super.onPause();
-        Log.i("ActivityLifeCycle","onPause is called");
+        Log.i("ActivityLifeCycle","onPause() is called");
     }
     protected void onStop(){
         super.onStop();
-        Log.i("ActivityLifeCycle","onStop is called");
+        Log.i("ActivityLifeCycle","onStop() is called");
     }
     protected void onDestroy(){
         super.onDestroy();
-        Log.i("ActivityLifeCycle","onDestroy is called");
+        Log.i("ActivityLifeCycle","onDestroy() is called");
     }
 }
