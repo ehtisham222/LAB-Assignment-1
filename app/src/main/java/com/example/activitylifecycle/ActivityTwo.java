@@ -9,14 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class ActivityTwo extends AppCompatActivity {
     private TextView onCreate,onStart,onResume,onRestart;
     private Button activityBtn;
     private int crt,strt,rsm,rstart=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_two);
         crt++;
         onCreate=findViewById(R.id.tvOnCreate);
         onCreate.setText("onCreate Calls : "+crt);
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         activityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,ActivityTwo.class);
+                Intent intent=new Intent(ActivityTwo.this,MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -64,4 +64,3 @@ public class MainActivity extends AppCompatActivity {
         Log.i("ActivityLifeCycle","onDestroy is called");
     }
 }
-
